@@ -1,5 +1,6 @@
 package retoclase6;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -57,9 +58,20 @@ public class ListNamesTest {
 			break;
 		}
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + order);
+			throw new IllegalArgumentException("Valor no listado: " + order);
 		}
-
+		
+		System.out.print("------------------------------------------------------------------------------------------\n");
+		System.out.print("Mostrar listado en modo inverso? \n");
+		System.out.print("SI [1] \n");
+		System.out.print("NO [2] \n");
+		int isInverse = data.nextInt();
+		
+		if(isInverse == 1) {
+			Collections.reverse(sortedPeople);
+		}
+		
+		
 		String out = "\n";
 
 		//each final result and print on screen
